@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   GUCCI MUSEUM UI SYSTEM
+========================= */
+
+body {
+  @apply bg-[#050505] text-white overflow-hidden;
+  font-family: "Georgia", serif;
+}
+
+/* cinematic grain texture */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* =========================
+   GLASS MORPHISM (APPLE STYLE)
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+/* =========================
+   TYPOGRAPHY LUXURY SYSTEM
+========================= */
+
+.serif-title {
+  font-family: "Georgia", serif;
+  letter-spacing: 0.12em;
+}
+
+.sans-meta {
+  font-family: Inter, sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.55;
+}
+
+/* =========================
+   MUSEUM FADE (iMessage STYLE)
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.museum-fade {
+  animation: fadeUp 0.6s ease-out;
+}
+
+/* =========================
+   HOVER LUXURY EFFECTS
+========================= */
+
+.hover-lux {
+  transition: all 0.25s ease;
+}
+
+.hover-lux:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateX(3px);
+}
+
+/* =========================
+   MESSAGE BUBBLE LUXURY
+========================= */
+
+.bubble {
+  padding: 14px 16px;
+  border-radius: 18px;
+  max-width: 70%;
+  line-height: 1.6;
+}
+
+.bubble-user {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  margin-left: auto;
+  color: white;
+}
+
+.bubble-ai {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
